@@ -1,5 +1,13 @@
 # Write your code here.
 
+<<<<<<< HEAD
+=======
+##  need to define a method that puts out the sting 'the line is empty'
+# need to add new customers to an waiting line and give them a ticket with their line number
+# need to write a 'now serving' method that calls out the next person in line or
+#   if no-one else is inline it calls 'there is no one waiting to be served'
+
+>>>>>>> 90a20046811c4684e026b2201e30c9d2ae70952f
 katz_deli = [] 
 other_deli = ["Logan", "Avi", "Spencer"]
 another_deli = ["Amanda", "Annette", "Ruchi", "Jason", "Logan", "Spencer", "Avi", "Joe", "Rachel", "Lindsey"]
@@ -16,6 +24,7 @@ def line(ppl)
 
   # If there are people in line...  
   else
+<<<<<<< HEAD
     crnt_ln = []
     
     ppl.each_with_index do |nm, ndx|
@@ -25,11 +34,30 @@ def line(ppl)
     
     crnt_ln.unshift("The line is currently:")
     puts crnt_ln.join
+=======
+    
+    s = "The line is currently: "
+    crnt_ln = []
+    ppl.each_with_index do |name, index|
+      add_one = index + 1
+      crnt_ln << "#{index}. #{name}"
+    end
+    
+    return crnt_ln
+    
+    i = 0
+    while i < ppl.length
+      x = (i + 1).to_s + "." + ppl[i]
+      s += x
+    end
+    puts s
+>>>>>>> 90a20046811c4684e026b2201e30c9d2ae70952f
   end
 end
 
 def take_a_number(arr, name)
   arr.push(name)
+<<<<<<< HEAD
   puts "Welcome, #{name}. You are number " + (arr.length).to_s + " in line."
 end
 
@@ -45,6 +73,16 @@ end
 #take_a_number(katz_deli, "Ada")
 #take_a_number(katz_deli, "Grace")
 #take_a_number(katz_deli, "Kent")
+=======
+  puts "Welcome, #{name}. You are number " + arr.length + " in line."
+end
+
+def now_serving(arr)
+  "Currently serving " + arr[1]
+end
+
+take_a_number(katz_deli, "Ada")
+>>>>>>> 90a20046811c4684e026b2201e30c9d2ae70952f
 line(katz_deli)
 line(other_deli)
 line(another_deli)
